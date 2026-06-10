@@ -1,57 +1,57 @@
-import { MapPin, Phone, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Clock, MessageCircle } from "lucide-react";
 
 interface LocationsSectionProps {
-  language: 'es' | 'en';
+  language: "es" | "en";
 }
 
 const translations = {
   es: {
-    title: 'Nuestras Ubicaciones',
-    phone: 'Teléfono',
-    hours: 'Horario',
-    reserve: 'Reservar',
-    viewMap: 'Ver en Mapa',
+    title: "Nuestras Ubicaciones",
+    phone: "Teléfono",
+    hours: "Horario",
+    reserve: "Reservar",
+    viewMap: "Ver en Mapa",
     locations: [
       {
-        name: 'Zamashi - Centro',
-        address: 'Av. Principal 123, Centro Histórico',
-        phone: '+52 55 1234 5678',
-        hours: 'Lun-Dom: 1:00 PM - 11:00 PM',
-        whatsapp: 'https://wa.me/525512345678',
-        mapUrl: 'https://maps.google.com',
+        name: "Zamashi - Centro",
+        address: "Av. Principal 123, Centro Histórico",
+        phone: "+52 55 1234 5678",
+        hours: "Lun-Dom: 1:00 PM - 11:00 PM",
+        whatsapp: "https://wa.me/525512345678",
+        mapUrl: "https://maps.google.com",
       },
       {
-        name: 'Kazamashi - Polanco',
-        address: 'Av. Presidente Masaryk 456, Polanco',
-        phone: '+52 55 8765 4321',
-        hours: 'Mar-Dom: 8:00 AM - 11:00 PM (Desayunos próximamente)',
-        whatsapp: 'https://wa.me/525587654321',
-        mapUrl: 'https://maps.google.com',
+        name: "Kazamashi - Polanco",
+        address: "Av. Presidente Masaryk 456, Polanco",
+        phone: "+52 55 8765 4321",
+        hours: "Mar-Dom: 8:00 AM - 11:00 PM (Desayunos próximamente)",
+        whatsapp: "https://wa.me/525587654321",
+        mapUrl: "https://maps.google.com",
       },
     ],
   },
   en: {
-    title: 'Our Locations',
-    phone: 'Phone',
-    hours: 'Hours',
-    reserve: 'Reserve',
-    viewMap: 'View on Map',
+    title: "Our Locations",
+    phone: "Phone",
+    hours: "Hours",
+    reserve: "Reserve",
+    viewMap: "View on Map",
     locations: [
       {
-        name: 'Zamashi - Downtown',
-        address: '123 Main Avenue, Historic Center',
-        phone: '+52 55 1234 5678',
-        hours: 'Mon-Sun: 1:00 PM - 11:00 PM',
-        whatsapp: 'https://wa.me/525512345678',
-        mapUrl: 'https://maps.google.com',
+        name: "Zamashi - Downtown",
+        address: "123 Main Avenue, Historic Center",
+        phone: "+52 55 1234 5678",
+        hours: "Mon-Sun: 1:00 PM - 11:00 PM",
+        whatsapp: "https://wa.me/525512345678",
+        mapUrl: "https://maps.google.com",
       },
       {
-        name: 'Kazamashi - Polanco',
-        address: '456 Presidente Masaryk Avenue, Polanco',
-        phone: '+52 55 8765 4321',
-        hours: 'Tue-Sun: 8:00 AM - 11:00 PM (Breakfast coming soon)',
-        whatsapp: 'https://wa.me/525587654321',
-        mapUrl: 'https://maps.google.com',
+        name: "Kazamashi - Polanco",
+        address: "456 Presidente Masaryk Avenue, Polanco",
+        phone: "+52 55 8765 4321",
+        hours: "Tue-Sun: 8:00 AM - 11:00 PM (Breakfast coming soon)",
+        whatsapp: "https://wa.me/525587654321",
+        mapUrl: "https://maps.google.com",
       },
     ],
   },
@@ -69,13 +69,17 @@ export default function LocationsSection({ language }: LocationsSectionProps) {
 
         <div className="grid md:grid-cols-2 gap-8">
           {t.locations.map((location, index) => (
-            <div key={index} className="bg-neutral-50 rounded-lg overflow-hidden shadow-lg">
+            <div
+              key={index}
+              className="bg-neutral-50 rounded-lg overflow-hidden shadow-lg"
+            >
               {/* Map Placeholder */}
               <div className="h-64 bg-neutral-200 relative">
                 <img
-                  src={index === 0
-                    ? "https://images.unsplash.com/photo-1777502286448-35389817f504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxqYXBhbmVzZSUyMHN1c2hpJTIwcmVzdGF1cmFudCUyMGVsZWdhbnR8ZW58MXx8fHwxNzgwNjMwMTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                    : "https://images.unsplash.com/photo-1647943766693-a9ce5760e50c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxpdGFsaWFuJTIwcGFzdGElMjByZXN0YXVyYW50fGVufDF8fHx8MTc4MDQ2NjI4N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+                  src={
+                    index === 0
+                      ? "https://images.unsplash.com/photo-1777502286448-35389817f504?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxqYXBhbmVzZSUyMHN1c2hpJTIwcmVzdGF1cmFudCUyMGVsZWdhbnR8ZW58MXx8fHwxNzgwNjMwMTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+                      : "https://images.unsplash.com/photo-1647943766693-a9ce5760e50c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxpdGFsaWFuJTIwcGFzdGElMjByZXN0YXVyYW50fGVufDF8fHx8MTc4MDQ2NjI4N3ww&ixlib=rb-4.1.0&q=80&w=1080"
                   }
                   alt={location.name}
                   className="w-full h-full object-cover"
@@ -96,10 +100,7 @@ export default function LocationsSection({ language }: LocationsSectionProps) {
 
                   <div className="flex items-center space-x-3">
                     <Phone className="w-5 h-5 text-neutral-600 flex-shrink-0" />
-                    <a
-                      href={`tel:${location.phone}`}
-                      className="text-neutral-700 hover:text-neutral-900"
-                    >
+                    <a className="text-neutral-700 hover:text-neutral-900">
                       {location.phone}
                     </a>
                   </div>
